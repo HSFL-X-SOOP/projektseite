@@ -1,28 +1,59 @@
 import { Link } from "@heroui/link";
+import { Outlet } from "react-router-dom";
 
 import { Navbar } from "@/components/navbar";
 
-export default function DefaultLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function DefaultLayout() {
   return (
-    <div className="relative flex flex-col h-screen">
+    <div className="relative flex flex-col min-h-screen">
       <Navbar />
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
-        {children}
+        <Outlet />
       </main>
-      <footer className="w-full flex items-center justify-center py-3">
-        <Link
-          isExternal
-          className="flex items-center gap-1 text-current"
-          href="https://heroui.com"
-          title="heroui.com homepage"
-        >
-          <span className="text-default-600">Powered by</span>
-          <p className="text-primary">HeroUI</p>
-        </Link>
+      <footer className="w-full bg-default-50 dark:bg-default-100 mt-12">
+        <div className="container mx-auto max-w-7xl px-6 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h4 className="font-semibold text-lg mb-3">MARLIN</h4>
+              <p className="text-sm text-default-600">
+                Maritime Live Information - Ein Kooperationsprojekt zwischen der
+                Hochschule Flensburg und SOOP
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-lg mb-3">Links</h4>
+              <div className="flex flex-col gap-2">
+                <Link
+                  isExternal
+                  className="text-sm text-default-600 hover:text-primary"
+                  href="https://www.marlin-live.com"
+                >
+                  Live-Plattform
+                </Link>
+                <Link
+                  isExternal
+                  className="text-sm text-default-600 hover:text-primary"
+                  href="https://hs-flensburg.de"
+                >
+                  Hochschule Flensburg
+                </Link>
+              </div>
+            </div>
+            <div>
+              <h4 className="font-semibold text-lg mb-3">Kontakt</h4>
+              <p className="text-sm text-default-600">
+                Masterstudiengang Angewandte Informatik
+                <br />
+                Hochschule Flensburg
+              </p>
+            </div>
+          </div>
+          <div className="border-t border-default-200 dark:border-default-100 mt-8 pt-6">
+            <p className="text-center text-sm text-default-600">
+              © 2024-2026 MARLIN Project. Alle Rechte vorbehalten.
+            </p>
+          </div>
+        </div>
       </footer>
     </div>
   );
