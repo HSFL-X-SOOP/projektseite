@@ -13,7 +13,7 @@ import { Link as RouterLink, useLocation } from "react-router-dom";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import LogoSVG from "@/assets/LOGO.svg";
+import {Logo} from "@/components/icons.tsx";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -26,7 +26,7 @@ export const Navbar = () => {
             className="flex justify-start items-center gap-2 text-foreground"
             to="/"
           >
-            <img src={LogoSVG} alt="MARLIN Logo" className="w-8 h-8" />
+            <Logo size={60} className="text-primary "/>
             <p className="font-bold text-inherit text-lg">MARLIN</p>
           </RouterLink>
         </NavbarBrand>
