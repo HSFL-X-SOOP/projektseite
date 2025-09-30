@@ -7,7 +7,7 @@ const milestones = [
   {
     title: "Konzepterstellung",
     status: "completed",
-    date: "September 2024 - November 2024",
+    date: "April 2025 - Mai 2025",
     description:
       "Anforderungsanalyse und Recherche zu verwandten Arbeiten. Erste Prototypen für die Visualisierung werden vorgestellt.",
     deliverables: [
@@ -20,7 +20,7 @@ const milestones = [
   {
     title: "MVP (Minimal Viable Product)",
     status: "completed",
-    date: "Dezember 2024 - Februar 2025",
+    date: "Mai 2025 - Juli 2025",
     description:
       "Erste technische Umsetzung des vorgestellten Konzepts. Das Feedback zur Grundidee und zum ersten funktionalen Entwurf ist ausschlaggebend für die weitere Entwicklung.",
     deliverables: [
@@ -33,7 +33,7 @@ const milestones = [
   {
     title: "Release 1 - Webseite",
     status: "in-progress",
-    date: "März 2025 - Juli 2025",
+    date: "Juli 2025 - Oktober 2025",
     description:
       "Funktionale, öffentliche Webseite als Weiterentwicklung des MVP. Aufgebaut auf einem festgelegten Technologiestack.",
     deliverables: [
@@ -46,7 +46,7 @@ const milestones = [
   {
     title: "Release 2 - Mobile App",
     status: "upcoming",
-    date: "August 2025 - November 2025",
+    date: "Oktober 2025 - Januar 2026",
     description:
       "Mobile Anwendung mit dem Umfang der Webseite, optimiert für Smartphones mit zusätzlichen Features.",
     deliverables: [
@@ -57,9 +57,9 @@ const milestones = [
     ],
   },
   {
-    title: "Release 3 - Public Displays",
+    title: "Final Release - Public Displays",
     status: "upcoming",
-    date: "Dezember 2025 - April 2026",
+    date: "Januar 2026 - April 2026",
     description:
       "Ansicht der Sensordaten auf öffentlichen Displays in Hafenmeisterbüros und an Stränden für umfassende Datenverfügbarkeit.",
     deliverables: [
@@ -122,9 +122,9 @@ export default function MilestonesPage() {
                 <h3 className="font-semibold">Gesamtfortschritt</h3>
                 <span className="text-sm text-default-600">Bis April 2026</span>
               </div>
-              <Progress className="mb-2" color="primary" size="md" value={45} />
+              <Progress className="mb-2" color="primary" size="md" value={50} />
               <p className="text-sm text-default-600">
-                45% abgeschlossen - Aktuell bei Release 1 (Webseite)
+                50% abgeschlossen - Aktuell bei Release 1 (Webseite)
               </p>
             </CardBody>
           </Card>
@@ -219,7 +219,7 @@ export default function MilestonesPage() {
               <div className="flex justify-center items-center gap-8">
                 <div>
                   <p className="text-2xl font-bold text-primary">
-                    September 2024
+                    April 2025
                   </p>
                   <p className="text-sm text-default-600">Projektstart</p>
                 </div>

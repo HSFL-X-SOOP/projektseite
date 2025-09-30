@@ -100,7 +100,7 @@ export default function ContactPage() {
                 <CardBody className="p-6 space-y-4">
                   <div>
                     <h3 className="font-semibold mb-2">Projektleitung</h3>
-                    <p className="text-default-600">Prof. Dr. Simoin Olberding</p>
+                    <p className="text-default-600">Prof. Dr. Simon Olberding</p>
                     <p className="text-default-600">Hochschule Flensburg</p>
                   </div>
                   

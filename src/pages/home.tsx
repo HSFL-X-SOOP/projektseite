@@ -59,7 +59,7 @@ export default function HomePage() {
                         ].map((item, index) => (
                             <motion.div
                                 key={item.title}
-                                className="p-4 rounded-lg bg-default-100"
+                                className="p-4 rounded-lg bg-default-100 pointer-none:"
                                 initial={{opacity: 0, y: 20}}
                                 animate={{opacity: 1, y: 0}}
                                 transition={{delay: 0.8 + index * 0.1, duration: 0.5}}
@@ -107,7 +107,6 @@ export default function HomePage() {
             </div>
 
             <PartnerLogos/>
-
         </>
     );
 }
