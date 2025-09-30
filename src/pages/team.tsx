@@ -6,38 +6,60 @@ import { title } from "@/components/primitives";
 const teamMembers = [
   {
     name: "Daniel",
-    role: "Backend-Entwicklung & API",
+    role: "Projektmanagement",
     description:
-      "Verantwortlich für die Server-Infrastruktur und API-Entwicklung. Expertise in Node.js und Datenbank-Design.",
-    skills: ["Node.js", "PostgreSQL", "REST APIs", "Docker"],
+      "Koordiniert das Team und überwacht den Projektfortschritt. Verantwortlich für Planung und Organisation.",
+    skills: ["Projektmanagement"],
   },
   {
     name: "Fatih",
     role: "Frontend & Mobile App",
     description:
       "Entwickelt die Benutzeroberfläche und mobile Anwendung. Spezialisiert auf React Native und moderne UI/UX.",
-    skills: ["React Native", "TypeScript", "Tamagui", "UI/UX Design"],
+    skills: [
+      "React Native",
+      "TypeScript",
+      "Tamagui",
+      "UI/UX Design",
+      "Frontend Entwicklung",
+      "Mobile Entwicklung",
+    ],
   },
   {
     name: "Julian",
-    role: "Datenanalyse & Algorithmen",
+    role: "Frontend & Kartenvisualisierung",
     description:
-      "Analysiert Sensordaten und entwickelt Algorithmen für Dateninterpolation und -vorhersage.",
-    skills: ["Python", "Data Science", "Machine Learning", "Statistik"],
+      "Entwickelt die Kartenansicht und Frontend-Komponenten. Spezialisiert auf React Native und Visualisierung.",
+    skills: [
+      "React Native",
+      "TypeScript",
+      "Tamagui",
+      "UI/UX Design",
+      "Frontend Development",
+      "Kartenvisualisierung",
+    ],
   },
   {
     name: "Krister",
-    role: "Hardware & IoT",
+    role: "Backend & Datenanalyse",
     description:
-      "Entwickelt und wartet die Sensorkits. Expertise in Embedded Systems und IoT-Protokollen.",
-    skills: ["Arduino", "Raspberry Pi", "Sensortechnik", "IoT"],
+      "Entwickelt Backend-Services und analysiert Sensordaten. Expertise in API-Entwicklung und Datenverarbeitung.",
+    skills: ["Backend Entwicklung", "Datenanalyse", "API Entwicklung"],
   },
   {
     name: "Tarek",
-    role: "DevOps & Infrastruktur",
+    role: "Backend & DevOps",
     description:
-      "Verwaltet die Cloud-Infrastruktur und CI/CD-Pipelines. Sorgt für Skalierbarkeit und Zuverlässigkeit.",
-    skills: ["AWS", "Kubernetes", "CI/CD", "Monitoring"],
+      "Entwickelt Backend-Systeme und verwaltet die Infrastruktur. Expertise in Cloud-Technologien und CI/CD.",
+    skills: [
+      "AWS",
+      "Kubernetes",
+      "CI/CD",
+      "Monitoring",
+      "Backend Entwicklung",
+      "DEVOPS",
+      "Infrastruktur",
+    ],
   },
 ];
 
