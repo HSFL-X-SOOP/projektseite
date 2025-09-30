@@ -4,6 +4,8 @@ import { Link } from "@heroui/link";
 import { title, subtitle } from "@/components/primitives";
 import AnimatedLogo from "@/components/AnimatedLogo";
 import MapFeature from "@/components/MapFeature";
+import AdvantageCards from "@/components/AdvantageCards";
+import PartnerLogos from "@/components/PartnerLogos";
 
 export default function HomePage() {
   return (
@@ -84,6 +86,10 @@ export default function HomePage() {
           </motion.div>
         </motion.div>
       </section>
+      
+      <AdvantageCards />
+      
+      <PartnerLogos />
       
       <MapFeature />
     </>

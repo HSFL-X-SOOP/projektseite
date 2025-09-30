@@ -1,4 +1,6 @@
 import { title, subtitle } from "@/components/primitives";
+import HochschuleLogo from "@/assets/Logo_der_Hochschule_Flensburg.png";
+import SoopLogo from "@/assets/SOOP-LOGO.svg";
 
 export default function AboutPage() {
   return (
@@ -66,13 +68,27 @@ export default function AboutPage() {
           </p>
 
           <div className="bg-default-100 rounded-lg p-6">
-            <h4 className="font-semibold mb-4">Unsere Partner</h4>
-            <div className="flex flex-wrap gap-8 items-center justify-center">
+            <h4 className="font-semibold mb-6 text-center">Unsere Partner</h4>
+            <div className="flex flex-wrap gap-12 items-center justify-center">
               <div className="text-center">
+                <div className="bg-white dark:bg-gray-200 rounded-lg p-3 w-fit mx-auto mb-3">
+                  <img
+                    src={HochschuleLogo}
+                    alt="Hochschule Flensburg"
+                    className="h-12 w-auto object-contain"
+                  />
+                </div>
                 <p className="font-semibold">Hochschule Flensburg</p>
                 <p className="text-sm text-default-600">Akademischer Partner</p>
               </div>
               <div className="text-center">
+                <div className="bg-primary-500 dark:bg-primary-400 rounded-lg p-3 w-fit mx-auto mb-3">
+                  <img
+                    src={SoopLogo}
+                    alt="SOOP"
+                    className="h-12 w-auto object-contain"
+                  />
+                </div>
                 <p className="font-semibold">SOOP</p>
                 <p className="text-sm text-default-600">Technologie-Partner</p>
               </div>
