@@ -6,7 +6,7 @@ export const siteConfig = {
     "Maritime Live Information - Live-Messungen in Häfen zu Wasser- und Luftbedingungen",
   navItems: [
     {
-      label: "Home",
+      label: "Projekt",
       href: "/",
     },
     {

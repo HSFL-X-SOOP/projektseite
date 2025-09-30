@@ -5,6 +5,7 @@ import AboutPage from "@/pages/about";
 import TeamPage from "@/pages/team";
 import SensorsPage from "@/pages/sensors";
 import MilestonesPage from "@/pages/milestones";
+import ContactPage from "@/pages/contact";
 import DefaultLayout from "@/layouts/default";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route element={<TeamPage />} path="team" />
         <Route element={<SensorsPage />} path="sensors" />
         <Route element={<MilestonesPage />} path="milestones" />
+        <Route element={<ContactPage />} path="contact" />
       </Route>
     </Routes>
   );

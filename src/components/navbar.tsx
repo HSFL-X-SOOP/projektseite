@@ -13,7 +13,7 @@ import { Link as RouterLink, useLocation } from "react-router-dom";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { Logo, GithubIcon } from "@/components/icons.tsx";
+import { Logo, GithubIcon, MailIcon } from "@/components/icons.tsx";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -36,7 +36,7 @@ export const Navbar = () => {
               <RouterLink
                 className={`${
                   location.pathname === item.href
-                    ? "text-primary font-medium"
+                    ? "text-primary font-bold underline underline-offset-4 decoration-2"
                     : "text-foreground"
                 } hover:text-primary transition-colors`}
                 to={item.href}
@@ -52,7 +52,10 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className="hidden sm:flex gap-2 items-center">
+          <RouterLink to="/contact" title="Kontakt" className="flex items-center">
+            <MailIcon className="text-default-500" />
+          </RouterLink>
           <Link isExternal href="https://github.com/HSFL-X-SOOP" title="GitHub">
             <GithubIcon className="text-default-500" />
           </Link>

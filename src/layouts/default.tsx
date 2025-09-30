@@ -1,5 +1,5 @@
 import { Link } from "@heroui/link";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link as RouterLink } from "react-router-dom";
 
 import { Navbar } from "@/components/navbar";
 import HochschuleLogo from "@/assets/Logo_der_Hochschule_Flensburg.png";
@@ -48,6 +48,12 @@ export default function DefaultLayout() {
                 <br />
                 Hochschule Flensburg
               </p>
+              <RouterLink 
+                to="/contact" 
+                className="inline-block mt-3 text-sm text-primary hover:text-primary-600 transition-colors"
+              >
+                Kontaktformular →
+              </RouterLink>
             </div>
           </div>
           <div className="border-t border-default-200 dark:border-default-100 mt-8 pt-6">
