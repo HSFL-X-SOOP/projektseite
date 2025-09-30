@@ -114,7 +114,7 @@ export default function ContactPage() {
 
                   <div>
                     <h3 className="font-semibold mb-2">Projektlaufzeit</h3>
-                    <p className="text-default-600">Oktober 2024 - April 2026</p>
+                    <p className="text-default-600">April 2025 - April 2026</p>
                   </div>
                 </CardBody>
               </Card>
