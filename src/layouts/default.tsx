@@ -7,12 +7,12 @@ import SoopLogo from "@/assets/SOOP-LOGO.svg";
 
 export default function DefaultLayout() {
   return (
-    <div className="relative flex flex-col min-h-screen">
+    <div className="relative flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navbar />
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         <Outlet />
       </main>
-      <footer className="w-full bg-default-50 dark:bg-default-100 mt-12">
+      <footer className="w-full bg-gray-100 dark:bg-gray-800 mt-12">
         <div className="container mx-auto max-w-7xl px-6 py-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>

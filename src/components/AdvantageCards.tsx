@@ -50,13 +50,13 @@ const advantages: AdvantagesProps[] = [
 
 export default function AdvantageCards() {
   return (
-    <section className="py-20 px-6 relative overflow-hidden">
+    <section className="w-full py-20 px-8 lg:px-16 xl:px-24 relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900">
       {/* Background gradient animation */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-100/50 via-transparent to-secondary-100/50 dark:from-primary-950/30 dark:to-secondary-950/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-100/30 via-transparent to-secondary-100/30 dark:from-primary-950/20 dark:to-secondary-950/20" />
       </div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="w-full relative z-10">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -71,7 +71,7 @@ export default function AdvantageCards() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 2xl:gap-8">
           {advantages.map((advantage) => (
             <motion.div
               key={advantage.title}
