@@ -36,12 +36,10 @@ export default function MapFeature() {
               <div className="relative h-64 bg-default-100 rounded-lg overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <svg className="w-full h-full" viewBox="0 0 400 300">
-                    {/* Simplified map illustration */}
                     <rect x="0" y="0" width="400" height="300" fill="#f0f8ff" />
                     <path d="M50 150 Q 100 100, 150 120 T 250 140 Q 300 160, 350 130" 
                           stroke="#3b82f6" strokeWidth="2" fill="none" opacity="0.3"/>
                     
-                    {/* Animated sensor points */}
                     {[
                       { x: 80, y: 140, delay: 0 },
                       { x: 150, y: 120, delay: 0.2 },

@@ -36,7 +36,6 @@ export default function ContactPage() {
           </motion.p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -88,14 +87,12 @@ export default function ContactPage() {
               </Card>
             </motion.div>
 
-            {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5 }}
               className="space-y-8"
             >
-              {/* Project Information */}
               <Card className="shadow-xl">
                 <CardHeader className="pb-0 pt-6 px-6">
                   <h2 className="text-2xl font-bold">Projektinformationen</h2>
@@ -122,7 +119,6 @@ export default function ContactPage() {
                 </CardBody>
               </Card>
 
-              {/* Quick Contact */}
               <Card className="shadow-xl">
                 <CardHeader className="pb-0 pt-6 px-6">
                   <h2 className="text-2xl font-bold">Schnellkontakt</h2>
@@ -160,7 +156,6 @@ export default function ContactPage() {
                 </CardBody>
               </Card>
 
-              {/* Social Links */}
               <Card className="shadow-xl">
                 <CardHeader className="pb-0 pt-6 px-6">
                   <h2 className="text-2xl font-bold">Links</h2>

@@ -51,7 +51,6 @@ const advantages: AdvantagesProps[] = [
 export default function AdvantageCards() {
   return (
     <section className="w-full py-20 px-8 lg:px-16 xl:px-24 relative overflow-hidden bg-gradient-to-r from-gray-100 to-gray-50 dark:from-gray-800 dark:to-gray-900">
-      {/* Background gradient animation */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-100/30 via-transparent to-secondary-100/30 dark:from-primary-950/20 dark:to-secondary-950/20" />
       </div>
@@ -90,14 +89,12 @@ export default function AdvantageCards() {
               }}
               className="group relative"
             >
-              {/* Gradient border effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${advantage.gradient} rounded-2xl opacity-0 group-hover:opacity-30 dark:group-hover:opacity-40 blur-xl transition-opacity duration-500`} />
               
               <Card 
                 className="relative h-full backdrop-blur-md bg-white/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl"
               >
                 <div className="p-8">
-                  {/* Icon with gradient background */}
                   <motion.div 
                     className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${advantage.gradient} flex items-center justify-center mb-6 shadow-lg`}
                     whileHover={{ rotate: 3, scale: 1.05 }}
@@ -108,17 +105,14 @@ export default function AdvantageCards() {
                     </span>
                   </motion.div>
                   
-                  {/* Title */}
                   <h3 className="text-xl font-bold mb-3 text-default-800 dark:text-white">
                     {advantage.title}
                   </h3>
                   
-                  {/* Description */}
                   <p className="text-default-600 dark:text-gray-300 text-sm leading-relaxed">
                     {advantage.description}
                   </p>
                   
-                  {/* Decorative element */}
                   <motion.div 
                     className={`absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br ${advantage.gradient} opacity-10 rounded-tl-full`}
                     animate={{
@@ -136,7 +130,6 @@ export default function AdvantageCards() {
           ))}
         </div>
 
-        {/* Floating particles animation */}
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(5)].map((_, i) => (
             <motion.div

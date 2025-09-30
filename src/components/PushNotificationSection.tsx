@@ -6,7 +6,6 @@ import pushAnimation from "@/assets/push_animation.json";
 export default function PushNotificationSection() {
   return (
     <section className="py-24 px-6 relative overflow-hidden bg-gradient-to-br from-blue-50/50 via-white to-cyan-50/50 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950/30">
-      {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary-500 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-1/2 w-[500px] h-[500px] bg-secondary-500 rounded-full blur-3xl" />
@@ -20,7 +19,6 @@ export default function PushNotificationSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
         >
-          {/* Lottie Animation - Slightly to the left */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -29,7 +27,6 @@ export default function PushNotificationSection() {
             className="flex justify-center lg:justify-center lg:-ml-12 order-2 lg:order-1"
           >
             <div className="relative">
-              {/* Glow effect behind animation */}
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-3xl opacity-25 animate-pulse scale-125" />
 
               <Card className="relative backdrop-blur-md bg-white/80 dark:bg-gray-900/60 p-10 rounded-3xl border border-gray-200/50 dark:border-gray-700/50 shadow-2xl">
@@ -42,7 +39,6 @@ export default function PushNotificationSection() {
             </div>
           </motion.div>
 
-          {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -81,7 +77,6 @@ export default function PushNotificationSection() {
               </motion.p>
             </div>
 
-            {/* Feature list */}
             <motion.div
               className="space-y-3"
               initial={{ opacity: 0, y: 20 }}
