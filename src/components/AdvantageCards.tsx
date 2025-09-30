@@ -1,82 +1,163 @@
 import { motion } from "framer-motion";
-import { Card, CardBody } from "@heroui/card";
+import { Card } from "@heroui/card";
 
-const advantages = [
+type AdvantagesProps = {
+  icon: string;
+  title: string;
+  description: string;
+  gradient: string;
+  delay: number;
+};
+
+
+const advantages: AdvantagesProps[] = [
   {
     icon: "📡",
-    title: "Echtzeitdaten rund um die Uhr",
-    description: "Kontinuierliche Überwachung von Wasser- und Wetterbedingungen mit modernster Sensortechnik für präzise Entscheidungen."
+    title: "Echtzeitdaten 24/7",
+    description: "Kontinuierliche Überwachung von Wasser- und Wetterbedingungen mit modernster Sensortechnik.",
+    gradient: "from-blue-500 to-cyan-400",
+    delay: 0
   },
   {
     icon: "⚓",
-    title: "Sicherheit für Hafenbetrieb",
-    description: "Frühwarnsystem bei kritischen Wetterbedingungen schützt Boote, Infrastruktur und ermöglicht optimale Hafenplanung."
+    title: "Hafensicherheit",
+    description: "Frühwarnsystem bei kritischen Bedingungen schützt Infrastruktur und ermöglicht optimale Planung.",
+    gradient: "from-purple-500 to-pink-400",
+    delay: 0.1
   },
   {
     icon: "🌊",
-    title: "Offene Datenplattform",
-    description: "Transparente API und öffentlicher Datenzugang fördern Innovation und wissenschaftliche Forschung im maritimen Bereich."
+    title: "Open Data Platform",
+    description: "Transparente API und öffentlicher Zugang fördern Innovation im maritimen Bereich.",
+    gradient: "from-orange-500 to-red-400",
+    delay: 0.2
   },
   {
     icon: "🗺️",
-    title: "Interaktive Sensorkarte",
-    description: "Visualisierung aller Sensordaten auf einer übersichtlichen Karte mit Echtzeitwerten für schnelle Lagebeurteilung."
+    title: "Live Sensorkarte",
+    description: "Interaktive Visualisierung aller Sensordaten mit Echtzeitwerten auf einer Karte.",
+    gradient: "from-green-500 to-teal-400",
+    delay: 0.3
   },
   {
     icon: "📱",
-    title: "Mobile App mit Benachrichtigungen",
-    description: "Push-Benachrichtigungen bei Unwetterwarnungen und kritischen Bedingungen direkt auf Ihr Smartphone."
+    title: "Smart Notifications",
+    description: "Push-Benachrichtigungen bei Unwetter und kritischen Bedingungen direkt aufs Smartphone.",
+    gradient: "from-indigo-500 to-blue-400",
+    delay: 0.4
   }
 ];
 
 export default function AdvantageCards() {
   return (
-    <section className="py-16 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-20 px-6 relative overflow-hidden">
+      {/* Background gradient animation */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-100/50 via-transparent to-secondary-100/50 dark:from-primary-950/30 dark:to-secondary-950/30" />
+      </div>
+      
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-bold mb-4">
-            Vorteile der MARLIN-Plattform
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-600 to-secondary-600 dark:from-primary-400 dark:to-secondary-400 bg-clip-text text-transparent">
+            Warum MARLIN?
           </h2>
-          <p className="text-lg text-default-600 max-w-2xl mx-auto">
-            Modernste Sensortechnologie kombiniert mit intelligenter Datenverarbeitung 
-            für smartes Hafenmanagement und maritime Forschung.
+          <p className="text-lg text-default-600 max-w-3xl mx-auto">
+            Erleben Sie die Zukunft der maritimen Datenverarbeitung
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {advantages.map((advantage, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {advantages.map((advantage) => (
             <motion.div
               key={advantage.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              initial={{ opacity: 0, y: 30, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                duration: 0.5, 
+                delay: advantage.delay,
+                type: "spring",
+                stiffness: 100
+              }}
+              whileHover={{ 
+                y: -5,
+                scale: 1.01,
+                transition: { duration: 0.2 }
+              }}
+              className="group relative"
             >
+              {/* Gradient border effect */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${advantage.gradient} rounded-2xl opacity-0 group-hover:opacity-30 dark:group-hover:opacity-40 blur-xl transition-opacity duration-500`} />
+              
               <Card 
-                className={`h-full ${
-                  index % 2 === 0 
-                    ? "bg-secondary-50/50 dark:bg-secondary-900/20" 
-                    : "bg-primary-50/50 dark:bg-primary-900/20"
-                }`}
+                className="relative h-full backdrop-blur-md bg-white/80 dark:bg-gray-900/60 border border-gray-200/50 dark:border-gray-700/50 shadow-2xl"
               >
-                <CardBody className="p-8 text-center">
-                  <div className="text-5xl mb-4">
-                    {advantage.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">
+                <div className="p-8">
+                  {/* Icon with gradient background */}
+                  <motion.div 
+                    className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${advantage.gradient} flex items-center justify-center mb-6 shadow-lg`}
+                    whileHover={{ rotate: 3, scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <span className="text-4xl filter drop-shadow-md">
+                      {advantage.icon}
+                    </span>
+                  </motion.div>
+                  
+                  {/* Title */}
+                  <h3 className="text-xl font-bold mb-3 text-default-800 dark:text-white">
                     {advantage.title}
                   </h3>
-                  <p className="text-default-600">
+                  
+                  {/* Description */}
+                  <p className="text-default-600 dark:text-gray-300 text-sm leading-relaxed">
                     {advantage.description}
                   </p>
-                </CardBody>
+                  
+                  {/* Decorative element */}
+                  <motion.div 
+                    className={`absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-br ${advantage.gradient} opacity-10 rounded-tl-full`}
+                    animate={{
+                      scale: [1, 1.2, 1],
+                    }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                  />
+                </div>
               </Card>
             </motion.div>
+          ))}
+        </div>
+
+        {/* Floating particles animation */}
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(5)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-primary-400/30 rounded-full"
+              style={{
+                left: `${20 + i * 20}%`,
+                top: `${10 + i * 15}%`,
+              }}
+              animate={{
+                y: [-20, 20, -20],
+                x: [-10, 10, -10],
+                opacity: [0.3, 0.7, 0.3],
+              }}
+              transition={{
+                duration: 3 + i,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: i * 0.5,
+              }}
+            />
           ))}
         </div>
       </div>
