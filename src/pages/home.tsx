@@ -101,9 +101,11 @@ export default function HomePage() {
             </div>
 
             <MapFeature/>
-            
-            <PushNotificationSection/>
-            
+
+            <div className="relative left-[50%] right-[50%] -mx-[50vw] w-[100vw]">
+                <PushNotificationSection/>
+            </div>
+
             <PartnerLogos/>
 
         </>

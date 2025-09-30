@@ -5,38 +5,38 @@ import pushAnimation from "@/assets/push_animation.json";
 
 export default function PushNotificationSection() {
   return (
-    <section className="py-20 px-6 relative overflow-hidden">
+    <section className="py-24 px-6 relative overflow-hidden bg-gradient-to-br from-blue-50/50 via-white to-cyan-50/50 dark:from-gray-900 dark:via-gray-950 dark:to-blue-950/30">
       {/* Background decoration */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary-500 rounded-full blur-3xl" />
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-1/4 -left-1/4 w-[600px] h-[600px] bg-primary-500 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/2 w-[500px] h-[500px] bg-secondary-500 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto px-8 lg:px-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center"
         >
-          {/* Lottie Animation */}
+          {/* Lottie Animation - Slightly to the left */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex justify-center lg:justify-end"
+            className="flex justify-center lg:justify-center lg:-ml-12 order-2 lg:order-1"
           >
             <div className="relative">
               {/* Glow effect behind animation */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-3xl opacity-20 animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-3xl opacity-25 animate-pulse scale-125" />
 
-              <Card className="relative backdrop-blur-md bg-white/80 dark:bg-gray-900/60 p-8 rounded-3xl border border-gray-200/50 dark:border-gray-700/50 shadow-2xl">
+              <Card className="relative backdrop-blur-md bg-white/80 dark:bg-gray-900/60 p-10 rounded-3xl border border-gray-200/50 dark:border-gray-700/50 shadow-2xl">
                 <Lottie
                   animationData={pushAnimation}
                   loop={true}
-                  className="w-64 h-64 lg:w-80 lg:h-80"
+                  className="w-80 h-80 lg:w-96 lg:h-96"
                 />
               </Card>
             </div>
@@ -44,11 +44,11 @@ export default function PushNotificationSection() {
 
           {/* Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="space-y-6 order-1 lg:order-2"
           >
             <div>
               <motion.h2
@@ -83,7 +83,7 @@ export default function PushNotificationSection() {
 
             {/* Feature list */}
             <motion.div
-              className="space-y-4"
+              className="space-y-3"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
@@ -111,19 +111,6 @@ export default function PushNotificationSection() {
                   </p>
                 </motion.div>
               ))}
-            </motion.div>
-
-            {/* CTA */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.2 }}
-              viewport={{ once: true }}
-              className="pt-4"
-            >
-              <p className="text-sm text-default-500 dark:text-gray-400">
-                Verfügbar in der MARLIN Mobile App für iOS und Android
-              </p>
             </motion.div>
           </motion.div>
         </motion.div>

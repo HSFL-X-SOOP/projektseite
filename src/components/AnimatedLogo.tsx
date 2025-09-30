@@ -98,13 +98,13 @@ export default function AnimatedLogo() {
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-32 h-8 border-2 border-blue-400/30 rounded-[50%]"
+            className="absolute w-32 h-8 border-2 border-blue-500/60 dark:border-blue-400/30 rounded-[50%]"
             style={{
               left: '-64px',
             }}
             animate={{
               width: [128, 200],
-              opacity: [0.3, 0],
+              opacity: [0.45, 0],
               y: [0, -10],
             }}
             transition={{
@@ -127,10 +127,10 @@ export default function AnimatedLogo() {
         {[...Array(3)].map((_, i) => (
           <motion.div
             key={`signal-${i}`}
-            className="absolute w-4 h-4 bg-blue-400 rounded-full"
+            className="absolute w-4 h-4 bg-blue-500 dark:bg-blue-400 rounded-full"
             animate={{
               scale: [0, 2, 0],
-              opacity: [1, 0, 0],
+              opacity: [0.8, 0, 0],
             }}
             transition={{
               duration: 2,
