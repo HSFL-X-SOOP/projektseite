@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Button } from "@heroui/button";
+import { Link } from "@heroui/link";
 import { title, subtitle } from "@/components/primitives";
 import AnimatedLogo from "@/components/AnimatedLogo";
 import MapFeature from "@/components/MapFeature";
@@ -64,16 +66,21 @@ export default function HomePage() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.1, duration: 0.5 }}
           >
-            <motion.a
-              className="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-primary-600 transition-colors"
-              href="https://www.marlin-live.com"
-              rel="noopener noreferrer"
-              target="_blank"
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Zur Live-Plattform
-            </motion.a>
+              <Button
+                as={Link}
+                href="https://www.marlin-live.com"
+                isExternal
+                color="primary"
+                size="lg"
+                className="font-semibold"
+              >
+                Zur Live-Plattform
+              </Button>
+            </motion.div>
           </motion.div>
         </motion.div>
       </section>

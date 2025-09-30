@@ -13,7 +13,7 @@ import { Link as RouterLink, useLocation } from "react-router-dom";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {Logo} from "@/components/icons.tsx";
+import { Logo, GithubIcon } from "@/components/icons.tsx";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -26,7 +26,7 @@ export const Navbar = () => {
             className="flex justify-start items-center gap-2 text-foreground"
             to="/"
           >
-            <Logo size={60} className="text-primary "/>
+            <Logo size={60} className="text-secondary dark:text-primary"/>
             <p className="font-bold text-inherit text-lg">MARLIN</p>
           </RouterLink>
         </NavbarBrand>
@@ -53,6 +53,9 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
+          <Link isExternal href="https://github.com/HSFL-X-SOOP" title="GitHub">
+            <GithubIcon className="text-default-500" />
+          </Link>
           <ThemeSwitch />
           <Button
             isExternal

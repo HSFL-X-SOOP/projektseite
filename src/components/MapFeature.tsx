@@ -143,6 +143,7 @@ export default function MapFeature() {
               as={Link}
               href="https://www.marlin-live.com/map"
               isExternal
+              variant={"ghost"}
               color="primary"
               size="lg"
               className="font-semibold"
