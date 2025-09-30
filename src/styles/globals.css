@@ -1,11 +1,4 @@
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Sanftere Hintergrundfarben */
-body {
-  @apply bg-gray-50 dark:bg-gray-900;
-}
+@config "../../tailwind.config.js";
 
-/* Optionale Anpassung für die Hauptcontainer */
-.main-container {
-  @apply bg-gray-50 dark:bg-gray-900;
-}
