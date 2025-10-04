@@ -18,7 +18,7 @@ export default function DefaultLayout() {
                         <div>
                             <h4 className="font-semibold text-lg mb-3">MARLIN</h4>
                             <p className="text-sm text-default-600">
-                                Maritime Live Information - Ein Kooperationsprojekt zwischen der
+                                Maritime Live Information - Ein gemeinsames Masterprojekt der
                                 Hochschule Flensburg und SOOP
                             </p>
                         </div>
@@ -45,6 +45,13 @@ export default function DefaultLayout() {
                                     href="https://www.soop-platform.earth/de/startseite"
                                 >
                                     SOOP
+                                </Link>
+                                <Link
+                                    isExternal
+                                    className="text-sm text-default-600 hover:text-primary"
+                                    href="https://hs-flensburg.de/impressum"
+                                >
+                                    Impressum (Hochschule)
                                 </Link>
                             </div>
                         </div>

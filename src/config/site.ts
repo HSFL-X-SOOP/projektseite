@@ -17,10 +17,10 @@ export const siteConfig = {
       label: "Team",
       href: "/team",
     },
-    {
-      label: "Sensordaten",
-      href: "/sensors",
-    },
+    // {
+    //   label: "Sensordaten",
+    //   href: "/sensors",
+    // },
     {
       label: "Meilensteine",
       href: "/milestones",
@@ -39,10 +39,10 @@ export const siteConfig = {
       label: "Team",
       href: "/team",
     },
-    {
-      label: "Sensordaten",
-      href: "/sensors",
-    },
+    // {
+    //   label: "Sensordaten",
+    //   href: "/sensors",
+    // },
     {
       label: "Meilensteine",
       href: "/milestones",

@@ -37,9 +37,10 @@ export default function HomePage() {
                 >
                     <div className="text-center px-6">
                         <p className="text-lg text-default-700">
-                            Eine Kooperation zwischen der Hochschule Flensburg und SOOP zur
+                            Ein gemeinsames Masterprojekt der Hochschule Flensburg und SOOP zur
                             Echtzeit-Erfassung und Visualisierung von Meeres- und Wetterdaten in
-                            verschiedenen Marinas.
+                            verschiedenen Marinas - entwickelt im Rahmen des Masterstudiengangs
+                            Angewandte Informatik.
                         </p>
                     </div>
 

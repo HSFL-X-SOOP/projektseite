@@ -12,9 +12,9 @@ export default function PartnerLogos() {
           transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
-          <h2 className="text-2xl font-bold mb-3">Unsere Partner</h2>
+          <h2 className="text-2xl font-bold mb-3">Gemeinsam entwickelt von</h2>
           <p className="text-default-600">
-            In Kooperation mit führenden Institutionen für maritime Innovation
+            Ein gemeinschaftliches Projekt für maritime Innovation
           </p>
         </motion.div>
 
@@ -36,7 +36,7 @@ export default function PartnerLogos() {
             </div>
             <h3 className="font-semibold text-lg mb-2">Hochschule Flensburg</h3>
             <p className="text-sm text-default-600 text-center">
-              Akademischer Partner und Forschungseinrichtung
+              Masterstudiengang Angewandte Informatik
             </p>
           </motion.div>
 
@@ -57,7 +57,7 @@ export default function PartnerLogos() {
             </div>
             <h3 className="font-semibold text-lg mb-2">SOOP</h3>
             <p className="text-sm text-default-600 text-center">
-              Technologie-Partner für IoT-Sensorsysteme
+              IoT-Sensorsysteme und Datenplattform
             </p>
           </motion.div>
         </div>

@@ -10,7 +10,8 @@ const sensorData = {
       "Die Wassertemperatur zeigt, wie warm oder kalt das Wasser ist.",
     icon: "🌡️",
     examples: [
-      { value: "0°C", description: "Gefriert" },
+      { value: "-2°C", description: "Meerwasser gefriert (wegen Salzgehalt)" },
+      { value: "0°C", description: "Süßwasser würde gefrieren" },
       { value: "5°C", description: "Getränk direkt aus dem Kühlschrank" },
       { value: "10-15°C", description: "Neoprenanzug empfohlen" },
       { value: "20-25°C", description: "Angenehm zum Schwimmen (Badehose)" },

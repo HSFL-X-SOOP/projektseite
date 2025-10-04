@@ -99,13 +99,14 @@ export default function ContactPage() {
                 </CardHeader>
                 <CardBody className="p-6 space-y-4">
                   <div>
-                    <h3 className="font-semibold mb-2">Projektleitung</h3>
-                    <p className="text-default-600">Prof. Dr. Simon Olberding</p>
-                    <p className="text-default-600">Hochschule Flensburg</p>
+                    <h3 className="font-semibold mb-2">Projektentwicklung</h3>
+                    <p className="text-default-600">Dieses Projekt wird im Rahmen des Masterstudiengangs</p>
+                    <p className="text-default-600">Angewandte Informatik an der Hochschule Flensburg</p>
+                    <p className="text-default-600">in Zusammenarbeit mit SOOP entwickelt.</p>
                   </div>
-                  
+
                   <div>
-                    <h3 className="font-semibold mb-2">Kooperationspartner</h3>
+                    <h3 className="font-semibold mb-2">Gemeinsam entwickelt von</h3>
                     <div className="flex gap-2 flex-wrap">
                       <Chip color="primary" variant="flat">Hochschule Flensburg</Chip>
                       <Chip color="secondary" variant="flat">SOOP</Chip>
