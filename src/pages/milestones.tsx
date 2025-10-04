@@ -32,7 +32,7 @@ const milestones = [
   },
   {
     title: "Release 1 - Webseite",
-    status: "in-progress",
+    status: "completed",
     date: "Juli 2025 - Oktober 2025",
     description:
       "Funktionale, öffentliche Webseite als Weiterentwicklung des MVP. Aufgebaut auf einem festgelegten Technologiestack.",
@@ -45,7 +45,7 @@ const milestones = [
   },
   {
     title: "Release 2 - Mobile App",
-    status: "upcoming",
+    status: "in-progress",
     date: "Oktober 2025 - Januar 2026",
     description:
       "Mobile Anwendung mit dem Umfang der Webseite, optimiert für Smartphones mit zusätzlichen Features.",
@@ -76,7 +76,7 @@ const getProgressValue = (status: string) => {
     case "completed":
       return 100;
     case "in-progress":
-      return 60;
+      return 50;
     default:
       return 0;
   }
@@ -122,9 +122,9 @@ export default function MilestonesPage() {
                 <h3 className="font-semibold">Gesamtfortschritt</h3>
                 <span className="text-sm text-default-600">Bis April 2026</span>
               </div>
-              <Progress className="mb-2" color="primary" size="md" value={50} />
+              <Progress className="mb-2" color="primary" size="md" value={65} />
               <p className="text-sm text-default-600">
-                50% abgeschlossen - Aktuell bei Release 1 (Webseite)
+                65% abgeschlossen - Aktuell bei Release 2 (Mobile App)
               </p>
             </CardBody>
           </Card>
