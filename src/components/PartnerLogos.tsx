@@ -57,7 +57,7 @@ export default function PartnerLogos() {
             </div>
             <h3 className="font-semibold text-lg mb-2">SOOP</h3>
             <p className="text-sm text-default-600 text-center">
-              IoT-Sensorsysteme und Datenplattform
+              Meeresforschungseinrichtung und Datenplattform
             </p>
           </motion.div>
         </div>
